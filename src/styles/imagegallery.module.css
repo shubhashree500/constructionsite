@@ -1,0 +1,38 @@
+
+.galleryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #000; /* Optional: Black background like the screenshot */
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .largeImage {
+    position: relative;
+    width: 250px; /* Adjust size */
+    height: 400px; /* Adjust size */
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .smallImage {
+    position: relative;
+    width: 250px; /* Adjust size */
+    height: 180px; /* Adjust size */
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
