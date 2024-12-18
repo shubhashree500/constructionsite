@@ -7,7 +7,7 @@ export default function AboutAndVisionSection() {
             <section className="py-16 bg-gray-100">
                 <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
                     {/* Text Content */}
-                    <div className="flex-1 animate-slideInLeft">
+                    <div className="flex-1 animate__animated animate__fadeInLeft">
                         <h2 className="text-4xl font-bold text-maroon mb-4 font-header">About Us</h2>
                         <p className="text-gray-600 text-lg leading-relaxed font-body">
                             We are Suvam Constructions (since 2000). We believe that finding the perfect
@@ -25,7 +25,7 @@ export default function AboutAndVisionSection() {
                     </div>
 
                     {/* Image */}
-                    <div className="flex-1 animate-slideInRight">
+                    <div className="flex-1 animate__animated animate__fadeInRight">
                         <Image
                             src="/about.jpg"
                             alt="About Us"
@@ -41,7 +41,7 @@ export default function AboutAndVisionSection() {
             <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
                     {/* Image */}
-                    <div className="flex-1 animate-slideInLeft">
+                    <div className="flex-1 animate__animated animate__fadeInLeft">
                         <Image
                             src="/vision.jpg"
                             alt="Our Vision"
@@ -52,7 +52,7 @@ export default function AboutAndVisionSection() {
                     </div>
 
                     {/* Text Content */}
-                    <div className="flex-1 animate-slideInRight">
+                    <div className="flex-1 animate__animated animate__fadeInRight">
                         <h2 className="text-4xl font-bold text-maroon mb-4 font-header">Our Vision</h2>
                         <p className="text-gray-600 text-lg leading-relaxed font-body">
                             At the heart of our mission is a vision to create a sustainable and innovative future.

@@ -1,5 +1,4 @@
-import Link from 'next/link'; // Import Link component for routing
-
+import Link from 'next/link';
 export default function Footer() {
     return (
         <footer className="bg-[#9F8E7D] text-black py-10 font-body">
