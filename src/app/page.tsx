@@ -26,17 +26,17 @@ export default function Home() {
         <section className="h-screen"></section>
 
         {/* Filter Section */}
-        <section className="py-16 px-4 bg-[#9F8E7D] border-b-2 border-black">
+        <section className="py-0 px-4 bg-[#9F8E7D] border-b-2 border-black">
           <FilterSection onSearch={handleSearch} />
         </section>
 
         {/* Projects Section */}
-        <section className="py-16 px-4">
+        <section className="py-0 px-4">
           <ProjectsSection />
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 px-4 bg-gray-100">
+        <section className="py-0 px-4 bg-gray-100">
           <TestimonialsSection />
         </section>
       </main>
