@@ -39,7 +39,7 @@ export default function HeroSection() {
             setTimeout(() => {
                 setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
                 setTransitioning(false);
-            }, 500);
+            }, 500);  // Timing for transition
         }, 3000);
         return () => clearInterval(interval);
     }, []);
@@ -48,8 +48,7 @@ export default function HeroSection() {
         <section className="relative h-screen overflow-hidden">
             {/* Background Image Slider */}
             <div
-                className={`absolute inset-0 transition-transform duration-700 ease-in-out ${transitioning ? "scale-110" : "scale-100"
-                    }`}
+                className={`absolute inset-0 transition-all duration-700 ease-in-out ${transitioning ? "opacity-0" : "opacity-100"}`}
                 style={{
                     backgroundImage: `url('${sliderImages[currentSlide]}')`,
                     backgroundSize: "cover",
@@ -77,26 +76,22 @@ export default function HeroSection() {
                     {/* Navigation Links */}
                     <nav className="flex gap-6">
                         <Link href="/about" passHref>
-                            <span className="text-lg font-semibold hover:scale-110 transition duration-300 cursor-pointer"
-                                style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                            <span className="text-lg font-semibold hover:scale-110 transition duration-300 cursor-pointer" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                                 About
                             </span>
                         </Link>
                         <Link href="/chairman-desk" passHref>
-                            <span className="text-lg font-semibold hover:scale-110 transition duration-300 cursor-pointer"
-                                style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                            <span className="text-lg font-semibold hover:scale-110 transition duration-300 cursor-pointer" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                                 Chairman's Desk
                             </span>
                         </Link>
                         <Link href="/projects" passHref>
-                            <span className="text-lg font-semibold hover:scale-110 transition duration-300 cursor-pointer"
-                                style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                            <span className="text-lg font-semibold hover:scale-110 transition duration-300 cursor-pointer" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                                 Projects
                             </span>
                         </Link>
                         <Link href="/contact-us" passHref>
-                            <span className="text-lg font-semibold hover:scale-110 transition duration-300 cursor-pointer"
-                                style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                            <span className="text-lg font-semibold hover:scale-110 transition duration-300 cursor-pointer" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                                 Contact Us
                             </span>
                         </Link>
@@ -106,7 +101,7 @@ export default function HeroSection() {
 
             {/* Overlay for Text Content */}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
-                <div className="text-center text-white">
+                <div className="text-center text-white px-4">
                     {/* Dynamic Heading */}
                     <h1 className="text-5xl font-bold animate-fadeInUp delay-300">
                         {sliderTexts[currentSlide].heading}
@@ -126,73 +121,3 @@ export default function HeroSection() {
         </section>
     );
 }
-
-
-
-// "use client";
-
-// import Link from "next/link";
-
-// export default function Navbar() {
-//     return (
-//         <div>
-//             <nav className="bg-transparent text-black py-0.5">  {/* Reduced padding for navbar height */}
-//                 <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
-//                     {/* Left side (Logo) */}
-//                     <div className="flex-grow flex justify-start">
-//                         <Link href="/" className="text-3xl font-extrabold">
-//                             <img
-//                                 src="/logo.png"
-//                                 alt="Logo"
-//                                 className="h-36 w-auto max-h-36 object-contain"  // Increased logo height
-//                             />
-//                         </Link>
-//                     </div>
-
-//                     {/* Right side (Navigation Links) */}
-//                     <div className="flex gap-6 flex-grow justify-end relative">
-//                         <Link
-//                             href="/about"
-//                             className="text-lg hover:scale-110 transition duration-300 ease-in-out font-semibold"  // Increased font size, added zoom effect
-//                             style={{ fontFamily: "'Montserrat', sans-serif" }} // Apply different font for nav links
-//                         >
-//                             About
-//                         </Link>
-//                         <Link
-//                             href="/chairman-desk"
-//                             className="text-lg hover:scale-110 transition duration-300 ease-in-out font-semibold"
-//                             style={{ fontFamily: "'Montserrat', sans-serif" }}
-//                         >
-//                             Chairman's Desk
-//                         </Link>
-
-//                         <Link
-//                             href="/projects"
-//                             className="text-lg hover:scale-110 transition duration-300 ease-in-out font-semibold"
-//                             style={{ fontFamily: "'Montserrat', sans-serif" }}
-//                         >
-//                             Projects
-//                         </Link>
-
-//                         <Link
-//                             href="/contact-us"
-//                             className="text-lg hover:scale-110 transition duration-300 ease-in-out font-semibold"
-//                             style={{ fontFamily: "'Montserrat', sans-serif" }}
-//                         >
-//                             Contact Us
-//                         </Link>
-//                     </div>
-//                 </div>
-//             </nav >
-
-//             {/* Marquee Section */}
-//             <div className="bg-black text-white py-2">
-//                 <marquee behavior="scroll" direction="left" className="text-sm font-medium">
-//                     📞 <a href="tel:+91-9853011904" className="text-white hover:underline">+1 (123) 456-7890</a> &nbsp; |
-//                     📞 <a href="tel:0674-3528144" className="text-white hover:underline">0674-3528144</a> &nbsp; |
-//                     ✉️ <a href="mailto:contact@construction.com" className="text-white hover:underline">contact@construction.com</a>
-//                 </marquee>
-//             </div >
-//         </div >
-//     );
-// } 

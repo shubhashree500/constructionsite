@@ -1,13 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image';
+
 export default function ChairmanDesk() {
     return (
         <div className="max-w-7xl mx-auto py-16 px-4 flex items-center animate-fadeIn">
             {/* Left Section: Image */}
             <div className="w-1/2 flex justify-center items-center animate-slideInLeft">
-                <img
-                    src="/public/chairman.jpg"
+                <Image
+                    src="/chairman.jpg"
                     alt="Chairman"
                     className="rounded-lg shadow-lg w-3/4 object-cover"
+                    width={400}
+                    height={400}
                 />
             </div>
 
@@ -16,7 +20,7 @@ export default function ChairmanDesk() {
                 <h1 className="text-4xl font-bold text-gray-800 mb-6 animate-fadeIn">Welcome to Suvam Constructions</h1>
                 <p className="text-gray-700 leading-7 mb-6 animate-fadeIn">
                     We are here since 2000. At the heart of our journey lies a simple yet profound vision: to create spaces that inspire and transform lives.
-                    Real estate is more than just bricks and mortar; it’s about building dreams, shaping communities, and leaving a lasting legacy.
+                    Real estate is more than just bricks and mortar; it&apos;s about building dreams, shaping communities, and leaving a lasting legacy.
                 </p>
                 <p className="text-gray-700 leading-7 mb-6 animate-fadeIn">
                     Over the years, we have committed ourselves to upholding the highest standards of integrity, innovation, and excellence.
@@ -27,7 +31,7 @@ export default function ChairmanDesk() {
                     improve, and deliver solutions that redefine what real estate can achieve.
                 </p>
                 <p className="text-gray-700 leading-7 mb-6 animate-fadeIn">
-                    Thank you for choosing Suvam Constructions as your partner in this journey. Together, let’s build a future we can all be proud of.
+                    Thank you for choosing Suvam Constructions as your partner in this journey. Together, let&apos;s build a future we can all be proud of.
                 </p>
                 <p className="text-gray-700 leading-7 animate-fadeIn">
                     <strong>Warm regards,</strong>

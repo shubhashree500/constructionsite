@@ -1,3 +1,5 @@
+"use client"; // Explicitly mark this component as a client-side component
+
 import { useState } from "react";
 
 export default function FilterSection({ onSearch }: { onSearch: (filters: any) => void }) {

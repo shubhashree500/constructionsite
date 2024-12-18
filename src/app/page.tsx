@@ -19,7 +19,7 @@ export default function Home() {
       </div>
 
       {/* Main Content: Scrolls over the Hero Section */}
-      <div className="relative z-10">
+      <main className="relative z-10">
         {/* Spacer to push content below Hero Section */}
         <section className="h-screen"></section>
 
@@ -29,11 +29,15 @@ export default function Home() {
         </section>
 
         {/* Projects Section */}
-        <ProjectsSection />
-        {/* Testimonials Section */}
-        <TestimonialsSection />
+        <section className="py-16 px-4">
+          <ProjectsSection />
+        </section>
 
-      </div>
+        {/* Testimonials Section */}
+        <section className="py-16 px-4 bg-gray-100">
+          <TestimonialsSection />
+        </section>
+      </main>
     </div>
   );
 }

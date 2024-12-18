@@ -8,26 +8,27 @@ export default function TestimonialsSection() {
     ];
 
     return (
-        <div className="border-4 border-[#9F8E7D] rounded-lg overflow-hidden">
-            <section className="flex">
-                {/* Left Section */}
-                <div className="w-1/4 bg-[#9F8E7D] flex items-center justify-center p-8">
-                    <h2 className="text-white text-5xl font-bold">Testimonials</h2>
+        <section className="py-16 px-4 bg-[#1A1A1A]">
+            <div className="max-w-7xl mx-auto text-center">
+                {/* Title Section */}
+                <div className="mb-12">
+                    <h2 className="text-4xl font-bold text-[#9F8E7D]">Testimonials</h2>
                 </div>
 
-                {/* Right Section */}
-                <div className="w-3/4 grid grid-cols-1 md:grid-cols-3 divide-x divide-gray-600 bg-[#1A1A1A]">
+                {/* Testimonials Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {testimonials.map((testimonial) => (
                         <div
                             key={testimonial.id}
-                            className="flex flex-col items-center justify-center text-center p-8 text-gray-300"
+                            className="bg-[#2A2A2A] text-gray-300 p-6 rounded-lg shadow-md transform hover:scale-105 hover:shadow-xl transition-all duration-300"
                         >
-                            <p className="mb-4">{testimonial.text}</p>
+                            <p className="text-lg mb-4 italic">&quot;{testimonial.text}&quot;</p>
+
                             <h3 className="text-[#9F8E7D] text-xl font-semibold">{testimonial.name}</h3>
                         </div>
                     ))}
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }

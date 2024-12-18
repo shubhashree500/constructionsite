@@ -27,14 +27,12 @@ export default function ProjectsSection() {
 
                 {/* Ongoing Projects */}
                 <div className="mb-12">
-                    <h3 className="text-2xl font-semibold text-white mb-6">
-                        Ongoing Projects
-                    </h3>
+                    <h3 className="text-2xl font-semibold text-white mb-6">Ongoing Projects</h3>
 
-                    <div className="flex flex-wrap justify-center items-start gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Large Image with Animation */}
                         <motion.div
-                            className="relative w-full max-w-md h-[60vh] rounded-lg overflow-hidden"
+                            className="relative w-full h-[60vh] rounded-lg overflow-hidden"
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5 }}
@@ -55,7 +53,7 @@ export default function ProjectsSection() {
                         </motion.div>
 
                         {/* Two Smaller Images with Animation */}
-                        <div className="flex flex-col gap-6 w-full max-w-md">
+                        <div className="flex flex-col gap-6">
                             {ongoingProjects.slice(1, 3).map((project, index) => (
                                 <motion.div
                                     key={project.id}
@@ -85,19 +83,16 @@ export default function ProjectsSection() {
 
                 {/* Completed Projects */}
                 <div>
-                    <h3 className="text-2xl font-semibold text-white mb-6">
-                        Completed Projects
-                    </h3>
+                    <h3 className="text-2xl font-semibold text-white mb-6">Completed Projects</h3>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                         {completedProjects.map((project) => (
                             <motion.div
                                 key={project.id}
-                                className="bg-white rounded-lg shadow-md overflow-hidden transform"
+                                className="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 hover:shadow-xl"
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5 }}
-                                whileHover={{ scale: 1.05, boxShadow: "0px 8px 16px rgba(0,0,0,0.3)" }}
                             >
                                 <div className="relative h-48 w-full">
                                     <Image

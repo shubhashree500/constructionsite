@@ -56,6 +56,7 @@ export default function Footer() {
                         <li>
                             <Link
                                 href="/"
+                                passHref
                                 className="hover:text-white hover:underline transition duration-300"
                             >
                                 Home
@@ -64,6 +65,7 @@ export default function Footer() {
                         <li>
                             <Link
                                 href="/about"
+                                passHref
                                 className="hover:text-white hover:underline transition duration-300"
                             >
                                 About Us
@@ -72,6 +74,7 @@ export default function Footer() {
                         <li>
                             <Link
                                 href="/contact-us"
+                                passHref
                                 className="hover:text-white hover:underline transition duration-300"
                             >
                                 Contact Us
@@ -80,6 +83,7 @@ export default function Footer() {
                         <li>
                             <Link
                                 href="/chairman-desk"
+                                passHref
                                 className="hover:text-white hover:underline transition duration-300"
                             >
                                 Chairman's Desk
@@ -88,6 +92,7 @@ export default function Footer() {
                         <li>
                             <Link
                                 href="/projects"
+                                passHref
                                 className="hover:text-white hover:underline transition duration-300"
                             >
                                 Projects
@@ -96,6 +101,7 @@ export default function Footer() {
                         <li>
                             <Link
                                 href="/terms"
+                                passHref
                                 className="hover:text-white hover:underline transition duration-300"
                             >
                                 Terms and Conditions

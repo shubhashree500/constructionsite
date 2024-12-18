@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function AboutAndVisionSection() {
     return (
         <>
@@ -8,15 +10,15 @@ export default function AboutAndVisionSection() {
                     <div className="flex-1 animate-slideInLeft">
                         <h2 className="text-4xl font-bold text-maroon mb-4 font-header">About Us</h2>
                         <p className="text-gray-600 text-lg leading-relaxed font-body">
-                            We are Suvam Constructions (since 2000)..We believe that finding the perfect
-                            property is more than just a transaction. It's a milestone in your journey. With
+                            We are Suvam Constructions (since 2000). We believe that finding the perfect
+                            property is more than just a transaction. It&apos;s a milestone in your journey. With
                             a passion for real estate and a commitment to excellence, we specialize in
                             connecting individuals, families, and businesses with spaces they’ll love to call
-                            their own. Our each and every project depicts your own story.
+                            their own. Our every project depicts your own story.
                         </p>
                         <p className="text-gray-600 text-lg leading-relaxed mt-4 font-body">
                             Our team of dedicated professionals brings unmatched expertise, local knowledge,
-                            and personalized service to every client interaction. Whether you’re buying,
+                            and personalized service to every client interaction. Whether you&apos;re buying,
                             selling, or investing, we prioritize your goals and work tirelessly to deliver
                             results that exceed expectations.
                         </p>
@@ -24,10 +26,12 @@ export default function AboutAndVisionSection() {
 
                     {/* Image */}
                     <div className="flex-1 animate-slideInRight">
-                        <img
+                        <Image
                             src="/about.jpg"
                             alt="About Us"
                             className="w-full rounded-lg shadow-lg"
+                            width={600}
+                            height={400}
                         />
                     </div>
                 </div>
@@ -38,10 +42,12 @@ export default function AboutAndVisionSection() {
                 <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
                     {/* Image */}
                     <div className="flex-1 animate-slideInLeft">
-                        <img
+                        <Image
                             src="/vision.jpg"
                             alt="Our Vision"
                             className="w-full rounded-lg shadow-lg"
+                            width={600}
+                            height={400}
                         />
                     </div>
 

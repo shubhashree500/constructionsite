@@ -26,7 +26,7 @@ export default function ContactUs() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="text-lg text-gray-600 text-center mb-8"
                 >
-                    Have questions? We're here to help and would love to hear from you.
+                    Have questions? We&apos;re here to help and would love to hear from you.
                 </motion.p>
 
                 {/* Contact Form */}
@@ -45,6 +45,7 @@ export default function ContactUs() {
                                 type="text"
                                 id="name"
                                 name="name"
+                                aria-label="Your Name"
                                 className="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Enter your full name"
                                 required
@@ -64,6 +65,7 @@ export default function ContactUs() {
                                 type="email"
                                 id="email"
                                 name="email"
+                                aria-label="Your Email"
                                 className="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Enter your email"
                                 required
@@ -81,9 +83,10 @@ export default function ContactUs() {
                             Your Phone Number
                         </label>
                         <input
-                            type="text"
+                            type="tel"
                             id="phone"
                             name="phone"
+                            aria-label="Your Phone Number"
                             className="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             placeholder="Enter your phone number"
                             required
@@ -102,7 +105,8 @@ export default function ContactUs() {
                         <textarea
                             id="message"
                             name="message"
-                            rows="4"
+                            rows={4}
+                            aria-label="Your Message"
                             className="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             placeholder="Write your message here"
                             required
