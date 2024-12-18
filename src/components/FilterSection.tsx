@@ -2,14 +2,23 @@
 
 import { useState } from "react";
 
-export default function FilterSection({ onSearch }: { onSearch: (filters: any) => void }) {
-    const [bhk, setBhk] = useState("");
-    const [location, setLocation] = useState("");
-    const [minBudget, setMinBudget] = useState("");
-    const [maxBudget, setMaxBudget] = useState("");
+// Define a more specific type for the filters
+interface FilterParams {
+    bhk: string;
+    location: string;
+    minBudget: string;
+    maxBudget: string;
+}
 
+export default function FilterSection({ onSearch }: { onSearch: (filters: FilterParams) => void }) {
+    const [bhk, setBhk] = useState<string>("");
+    const [location, setLocation] = useState<string>("");
+    const [minBudget, setMinBudget] = useState<string>("");
+    const [maxBudget, setMaxBudget] = useState<string>("");
+
+    // Handle the search logic
     const handleSearch = () => {
-        const filters = { bhk, location, minBudget, maxBudget };
+        const filters: FilterParams = { bhk, location, minBudget, maxBudget };
         onSearch(filters);
     };
 

@@ -82,7 +82,7 @@ export default function HeroSection() {
                         </Link>
                         <Link href="/chairman-desk" passHref>
                             <span className="text-lg font-semibold hover:scale-110 transition duration-300 cursor-pointer" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                                Chairman's Desk
+                                Chairman&apos;s Desk
                             </span>
                         </Link>
                         <Link href="/projects" passHref>

@@ -1,12 +1,14 @@
 "use client";
 
+import { FilterParams } from "../type/type";
 import HeroSection from "../components/HeroSection";
 import ProjectsSection from "../components/ProjectsSection";
 import FilterSection from "../components/FilterSection";
 import TestimonialsSection from "@/components/testimonialSection";
 
 export default function Home() {
-  const handleSearch = (filters: any) => {
+  // Handle the filter search logic
+  const handleSearch = (filters: FilterParams) => {
     console.log("Filters:", filters);
     // Add your search/filter logic here
   };

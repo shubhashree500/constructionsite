@@ -86,7 +86,7 @@ export default function Footer() {
                                 passHref
                                 className="hover:text-white hover:underline transition duration-300"
                             >
-                                Chairman's Desk
+                                Chairman&apos;s Desk
                             </Link>
                         </li>
                         <li>
