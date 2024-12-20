@@ -1,7 +1,6 @@
 "use client";
 import { FilterParams } from "../type/type";
 import HeroSection from "../components/HeroSection";
-import Navbar from "../components/Navbar";
 import ProjectsSection from "../components/ProjectsSection";
 import FilterSection from "../components/FilterSection";
 import TestimonialsSection from "@/components/testimonialSection";
@@ -17,7 +16,7 @@ export default function Home() {
   return (
     <div className="relative">
       <div className="fixed top-0 left-0 w-full h-screen -z-10">
-        <Navbar />
+
         {/* Hero Section: Stays fixed at the back */}
         <div className="fixed top-0 left-0 w-full h-screen -z-10">
           <HeroSection />

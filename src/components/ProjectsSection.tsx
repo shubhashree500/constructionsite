@@ -48,7 +48,7 @@ export default function ProjectsSection() {
 
                         {/* Two Smaller Images without Hover Effect */}
                         <div className="flex flex-col gap-6">
-                            {ongoingProjects.slice(1, 3).map((project, index) => (
+                            {ongoingProjects.slice(1, 3).map((project) => (
                                 <div
                                     key={project.id}
                                     className="relative w-full h-[30vh] rounded-lg overflow-hidden shadow-md border-4 border-[#9F8E7D]"
