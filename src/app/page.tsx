@@ -1,5 +1,4 @@
 "use client";
-
 import { FilterParams } from "../type/type";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
