@@ -30,14 +30,8 @@ export default function ProjectsSection() {
                     <h3 className="text-2xl font-semibold text-[#9F8E7D] mb-6">Ongoing Projects</h3>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Large Image with Animation */}
-                        <motion.div
-                            className="relative w-full h-[60vh] rounded-lg overflow-hidden border-4 border-[#9F8E7D]"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                            whileHover={{ scale: 1.05 }}
-                        >
+                        {/* Large Image without Hover Effect */}
+                        <div className="relative w-full h-[60vh] rounded-lg overflow-hidden border-4 border-[#9F8E7D]">
                             <Image
                                 src={ongoingProjects[0]?.image || "/placeholder.jpg"}
                                 alt="Ongoing Large Project"
@@ -50,18 +44,14 @@ export default function ProjectsSection() {
                                     View
                                 </button>
                             </div>
-                        </motion.div>
+                        </div>
 
-                        {/* Two Smaller Images with Animation */}
+                        {/* Two Smaller Images without Hover Effect */}
                         <div className="flex flex-col gap-6">
                             {ongoingProjects.slice(1, 3).map((project, index) => (
-                                <motion.div
+                                <div
                                     key={project.id}
                                     className="relative w-full h-[30vh] rounded-lg overflow-hidden shadow-md border-4 border-[#9F8E7D]"
-                                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                                    whileHover={{ scale: 1.05 }}
                                 >
                                     <Image
                                         src={project.image}
@@ -75,7 +65,7 @@ export default function ProjectsSection() {
                                             View
                                         </button>
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
                     </div>

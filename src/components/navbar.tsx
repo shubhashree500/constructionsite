@@ -1,27 +1,55 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [scrollingUp, setScrollingUp] = useState(true); // Track scroll direction
+
+    useEffect(() => {
+        let lastScrollY = window.scrollY; // Store the last scroll position
+        const handleScroll = () => {
+            if (window.scrollY > lastScrollY) {
+                setScrollingUp(false); // Scrolling down
+            } else {
+                setScrollingUp(true); // Scrolling up
+            }
+            lastScrollY = window.scrollY;
+        };
+
+        // Add scroll event listener
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            // Clean up the event listener on component unmount
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
-        <div className="fixed top-0 left-0 w-full z-20 bg-black bg-opacity-70 text-white py-4">
+        <div
+            className={`fixed top-0 left-0 w-full z-50 bg-transparent text-white py-4 font-poppins transition-all duration-300 ${scrollingUp ? "translate-y-0" : "-translate-y-full"
+                } sm:hidden md:block lg:block`} // Show navbar only on md and larger screens
+        >
             <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 lg:px-8">
-                {/* Logo */}
-                <Link href="/">
-                    <img
-                        src="/logo.png"
-                        alt="Logo"
-                        className="h-12 w-auto object-contain cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110"
-                    />
-                </Link>
+                {/* Logo on the Left */}
+                <div className="flex items-center">
+                    <Link href="/">
+                        <Image
+                            src="/logo.png"
+                            alt="Logo"
+                            width={94} // Increased size
+                            height={94}
+                            className="h-16 w-auto object-contain cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110"
+                        />
+                    </Link>
+                </div>
 
-                {/* Hamburger Menu Button */}
+                {/* Hamburger Menu Icon (Visible on Small Screens) */}
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="md:hidden focus:outline-none"
+                    className="block md:hidden text-white focus:outline-none z-50"
                 >
                     <svg
                         className="h-6 w-6"
@@ -42,31 +70,27 @@ export default function Navbar() {
                 {/* Navigation Links */}
                 <nav
                     className={`${isMenuOpen ? "flex" : "hidden"
-                        } absolute top-16 left-0 w-full bg-black bg-opacity-90 md:bg-transparent md:static md:flex md:gap-6 md:items-center flex-col md:flex-row text-center`}
+                        } absolute top-16 right-0 w-full z-50 md:static md:flex md:gap-6 md:items-center bg-transparent md:bg-transparent flex-col md:flex-row text-right`}
                 >
-                    <Link
-                        href="/about"
-                        className="block py-2 md:py-0 text-lg font-semibold hover:text-blue-500 transform transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
-                    >
-                        About
+                    <Link href="/about">
+                        <span className="block py-2 md:py-0 text-lg font-semibold hover:text-blue-400 transition-all duration-300">
+                            About
+                        </span>
                     </Link>
-                    <Link
-                        href="/chairman-desk"
-                        className="block py-2 md:py-0 text-lg font-semibold hover:text-blue-500 transform transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
-                    >
-                        Chairman&apos;s Desk
+                    <Link href="/chairman-desk">
+                        <span className="block py-2 md:py-0 text-lg font-semibold hover:text-blue-400 transition-all duration-300">
+                            Chairman&apos;s Desk
+                        </span>
                     </Link>
-                    <Link
-                        href="/projects"
-                        className="block py-2 md:py-0 text-lg font-semibold hover:text-blue-500 transform transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
-                    >
-                        Projects
+                    <Link href="/projects">
+                        <span className="block py-2 md:py-0 text-lg font-semibold hover:text-blue-400 transition-all duration-300">
+                            Projects
+                        </span>
                     </Link>
-                    <Link
-                        href="/contact-us"
-                        className="block py-2 md:py-0 text-lg font-semibold hover:text-blue-500 transform transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
-                    >
-                        Contact Us
+                    <Link href="/contact-us">
+                        <span className="block py-2 md:py-0 text-lg font-semibold hover:text-blue-400 transition-all duration-300">
+                            Contact Us
+                        </span>
                     </Link>
                 </nav>
             </div>

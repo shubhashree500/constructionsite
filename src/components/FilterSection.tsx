@@ -66,7 +66,7 @@ export default function FilterSection({ onSearch }: { onSearch: (filters: Filter
                         <select
                             value={bhk}
                             onChange={(e) => setBhk(e.target.value)}
-                            className="w-full p-3 border border-[#9F8E7D] rounded-md bg-[#1A1A1A] text-[#9F8E7D] focus:ring focus:ring-red-400"
+                            className="w-full p-3 border border-[#9F8E7D] rounded-md bg-[#1A1A1A] text-[#9F8E7D] focus:ring focus:[#9F8E7D]"
                         >
                             <option value="">Select BHK</option>
                             <option value="2">2 BHK</option>
@@ -82,7 +82,7 @@ export default function FilterSection({ onSearch }: { onSearch: (filters: Filter
                         <select
                             value={location}
                             onChange={(e) => setLocation(e.target.value)}
-                            className="w-full p-3 border border-[#9F8E7D] rounded-md bg-[#1A1A1A] text-[#9F8E7D] focus:ring focus:ring-red-400"
+                            className="w-full p-3 border border-[#9F8E7D] rounded-md bg-[#1A1A1A] text-[#9F8E7D] focus:ring focus:[#9F8E7D]"
                         >
                             <option value="">Select Location</option>
                             <option value="Bhubaneswar">Bhubaneswar</option>
@@ -98,7 +98,7 @@ export default function FilterSection({ onSearch }: { onSearch: (filters: Filter
                         <select
                             value={minBudget}
                             onChange={(e) => setMinBudget(e.target.value)}
-                            className="w-full p-3 border border-[#9F8E7D] rounded-md bg-[#1A1A1A] text-[#9F8E7D] focus:ring focus:ring-red-400"
+                            className="w-full p-3 border border-[#9F8E7D] rounded-md bg-[#1A1A1A] text-[#9F8E7D] focus:ring focus:[#9F8E7D]"
                         >
                             <option value="">Min</option>
                             <option value="500000">5 Lac</option>
@@ -113,7 +113,7 @@ export default function FilterSection({ onSearch }: { onSearch: (filters: Filter
                         <select
                             value={maxBudget}
                             onChange={(e) => setMaxBudget(e.target.value)}
-                            className="w-full p-3 border border-[#9F8E7D] rounded-md bg-[#1A1A1A] text-[#9F8E7D] focus:ring focus:ring-red-400"
+                            className="w-full p-3 border border-[#9F8E7D] rounded-md bg-[#1A1A1A] text-[#9F8E7D] focus:ring focus:[#9F8E7D]"
                         >
                             <option value="">Max</option>
                             <option value="500000">5 Lac</option>
