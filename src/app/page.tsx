@@ -2,7 +2,7 @@
 
 import { FilterParams } from "../type/type";
 import HeroSection from "../components/HeroSection";
-import Navbar from "@/components/navbar";
+import Navbar from "../components/Navbar";
 import ProjectsSection from "../components/ProjectsSection";
 import FilterSection from "../components/FilterSection";
 import TestimonialsSection from "@/components/testimonialSection";
