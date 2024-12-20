@@ -21,7 +21,7 @@ export default function Navbar() {
                 <nav className="flex gap-6 items-center">
                     <Link
                         href="/about"
-                        passHref
+
                         className="text-lg font-semibold hover:text-blue-500 transform transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
                     >
                         About

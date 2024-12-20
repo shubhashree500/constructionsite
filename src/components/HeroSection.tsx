@@ -37,7 +37,7 @@ export default function HeroSection() {
             setTimeout(() => {
                 setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
                 setTransitioning(false);
-            }, 500);  // Timing for transition
+            }, 500); // Timing for transition
         }, 3000);
         return () => clearInterval(interval);
     }, []);
@@ -57,19 +57,19 @@ export default function HeroSection() {
 
             {/* Overlay for Text Content */}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
-                <div className="text-center text-white px-4">
+                <div className="text-center text-white px-4 md:px-8 lg:px-12">
                     {/* Dynamic Heading */}
-                    <h1 className="text-5xl font-bold animate__animated animate__fadeInUp animate__delay-300ms">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold animate__animated animate__fadeInUp animate__delay-300ms">
                         {sliderTexts[currentSlide].heading}
                     </h1>
 
                     {/* Dynamic Description */}
-                    <p className="text-xl mt-4 animate__animated animate__fadeInUp animate__delay-500ms">
+                    <p className="text-base md:text-lg lg:text-xl mt-4 animate__animated animate__fadeInUp animate__delay-500ms">
                         {sliderTexts[currentSlide].description}
                     </p>
 
                     {/* Dynamic SubText */}
-                    <p className="text-2xl mt-6 animate__animated animate__fadeInUp animate__delay-700ms">
+                    <p className="text-lg md:text-xl lg:text-2xl mt-6 animate__animated animate__fadeInUp animate__delay-700ms">
                         {sliderTexts[currentSlide].subText}
                     </p>
                 </div>
